@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra Practice of MealDb website</title>
+    <!-- Daisy Ui link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google fonts import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="bg-white sticky top-0 z-50">
+        <nav class="w-full sm::w-11/12 sm:mx-auto">
+            <div class="navbar py-3">
+                <div class="navbar-start">
+
+                    <img src="./images/Tasty_HUT.png" alt="web-logo">
+                </div>
+
+                <div class="navbar-end">
+                    <button class="font-bold bg-[#facc15] p-3 rounded-md">Sign Up</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <div class="hero min-h-screen" style="background-image: url(./images/banner_1.png);">
+            <div class="hero-overlay bg-opacity-60"></div>
+            <div class="hero-content text-neutral-content text-center">
+                <div class="max-w-lg">
+                    <h1 class="mb-5 text-5xl font-bold">Taste Our Delicious Best Foods</h1>
+                    <p class="mb-5 w-11/12 mx-auto text-center">
+                        Discover recipes, tips, and culinary inspiration designed to elevate every meal. Whether you're
+                        cooking for family, friends, or yourself.
+                    </p>
+                    <div class="flex flex-col gap-3 md:flex-row md:justify-between md:items-center rounded-lg">
+                        <label class="input flex items-center w-4/5 mx-auto md:w-full">
+                            <input id="search-box" type="text" class="grow text-black" placeholder="Search Any Food" />
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                                class="h-4 w-4 opacity-70">
+                                <path fill-rule="evenodd"
+                                    d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </label>
+                        <button onclick="searchMeal()" id="search-btn"
+                            class="btn btn-primary w-fit mx-auto">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+
+
+    <!-- Category container -->
+    <main class="py-10">
+        <h1 class="text-3xl text-center font-extrabold">Categories</h1>
+        <div id="category-container" class="my-5 md:mt-10 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5 w-10/11">
+
+
+
+
+        </div>
+    </main>
+
+    <!-- - Category container ends here -->
+
+
+    <main class="md:py-24">
+        <h1 class="text-center font-semibold text-2xl md:text-4xl">Your Favourite Food</h1>
+         <div class="filter flex gap-5 justify-center items-center pb-10 my-3" id="filter_container">
+            <button onclick="filterFirstLetter()" class="bg-[#FFC107] rounded-lg font-bold text-xl py-2 px-3" id="filter_by_letter">Filter by First
+                letter</button>
+            <button onclick="showArea()" class="bg-[#FFC107] rounded-lg font-bold text-xl py-2 px-3" id="filter_by_area">Filter by
+                Area</button>
+        </div>
+
+        <div class="filter_content  pb-10 hidden gap-5 justify-center items-center  p-5" id="letter_container">
+            <button class="text-xl font-semibold filter_by_letter italic">A</button>
+            <button class="text-xl font-semibold filter_by_letter italic">B</button>
+            <button class="text-xl font-semibold filter_by_letter italic">C</button>
+            <button class="text-xl font-semibold filter_by_letter italic">D</button>
+            <button class="text-xl font-semibold filter_by_letter italic">E</button>
+            <button class="text-xl font-semibold filter_by_letter italic">F</button>
+            <button class="text-xl font-semibold filter_by_letter italic">G</button>
+            <button class="text-xl font-semibold filter_by_letter italic">H</button>
+            <button class="text-xl font-semibold filter_by_letter italic">I</button>
+            <button class="text-xl font-semibold filter_by_letter italic">J</button>
+            <button class="text-xl font-semibold filter_by_letter italic">K</button>
+            <button class="text-xl font-semibold filter_by_letter italic">J</button>
+            <button class="text-xl font-semibold filter_by_letter italic">L</button>
+            <button class="text-xl font-semibold filter_by_letter italic">M</button>
+            <button class="text-xl font-semibold filter_by_letter italic">N</button>
+            <button class="text-xl font-semibold filter_by_letter italic">O</button>
+            <button class="text-xl font-semibold filter_by_letter italic">P</button>
+            <button class="text-xl font-semibold filter_by_letter italic">Q</button>
+            <button class="text-xl font-semibold filter_by_letter italic">R</button>
+            <button class="text-xl font-semibold filter_by_letter italic">S</button>
+            <button class="text-xl font-semibold filter_by_letter italic">T</button>
+            <button class="text-xl font-semibold filter_by_letter italic">U</button>
+            <button class="text-xl font-semibold filter_by_letter italic">V</button>
+            <button class="text-xl font-semibold filter_by_letter italic">W</button>
+            <button class="text-xl font-semibold filter_by_letter italic">X</button>
+            <button class="text-xl font-semibold filter_by_letter italic">Y</button>
+            <button class="text-xl font-semibold filter_by_letter italic">Z</button>
+        </div> 
+
+        <div class="filter-by_Area pb-10 hidden grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-5 justify-center items-center" id="area_container"></div> 
+
+
+
+
+      
+        <div class="filter-by_Area pb-10 hidden grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-5 justify-center items-center"
+            id="area-container"></div> 
+        
+        <div id="meals-container" class="grid grid-cols-1 gap-4 lg:gap-6 lg:grid-cols-2 w-11/12 my-3 md:my-6 mx-auto">
+
+
+        </div>
+
+        <div class="text-center">
+            <button id="view-more" class="rounded-xl bg-[#facc15] py-4 px-8 mt-5  font-bold">View More</button>
+            <!-- <button id="go_top" class="hidden bg-[#FFC107] font-bold text-xl py-2 px-3 rounded-md">Go Top</button> -->
+        </div>
+
+      
+    </main>
+    <div id="modal-content">
+
+    </div>
+
+
+
+
+
+    <footer class="footer bg-[#131313] py-8 md:py-20 lg:py-24 pl-3 text-white ">
+        <div class="grid grid-cols-1 gap-7 footer lg:grid-cols-3  md:w-11/12 md:mx-auto ">
+            <nav>
+
+                <div class="flex gap-3">
+                    <img src="./images/Tasty_HUT.png" alt="peddy-logo">
+
+                </div>git remote add origin https://github.com/Sharif707/MealDB-practice-project.git
+                git push -u origin main
+
+                <a class="link link-hover">Branding</a>
+                <a class="link link-hover">Location: av. Washington 165, NY 5403
+                    <a class="link link-hover">Phone: <span>+31 85 964 47 25</span></a>
+                    <a class="link link-hover">Email: <span>info@yourdomain.comt</span></a>
+                    <a class="link link-hover">Openings hours: <span>9.00 AM - 5.00 PM</span></a></a>
+            </nav>
+            <nav>
+                <a class="link link-hover">Home</a>
+                <a class="link link-hover">About us</a>
+                <a class="link link-hover">Animals</a>
+                <a class="link link-hover">Foundation</a>
+                <a class="link link-hover">Contact</a>
+
+            </nav>
+
+            <form>
+                <h6 class="footer-title">Drop a message</h6>
+                <fieldset class="form-control w-80">
+                    <label class="label">
+                        <span class="label-text text-white">Enter your email address</span>
+                    </label>
+                    <div class="">
+                        <input type="text" placeholder="username@site.com"
+                            class="input input-bordered text-black block" />
+                        <button class="rounded-xl bg-[#0E7A81] py-4 px-8 mt-5">Subscribe</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </footer>
+
+
+    <script src="./javascript/index.js"></script>
+
+</body>
+
+</html>
