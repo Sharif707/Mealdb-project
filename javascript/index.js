@@ -48,7 +48,10 @@ const displayMeals = (isAll, meals) => {
     const div = document.createElement("div");
     div.classList.add(
       "flex",
+      "flex-col",
+      "md:flex-row",
       "gap-3",
+      
       "items-center",
       "border",
       "rounded-lg",
@@ -60,7 +63,7 @@ const displayMeals = (isAll, meals) => {
    
    <img class="w-72" src=${strMealThumb}>
    <div>
-   <h1 class="text-2xl font-bold">${strMeal}</h1>
+   <h1 class="text-2xl font-bold text-center md:text-left">${strMeal}</h1>
    <p class="text-lg text-justify my-3 text-[#706f6f]">
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, eius. Ratione perspiciatis quos vel nemo sequi unde at tenetur voluptatem architecto reiciendis! Numquam, </p>
 
